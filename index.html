@@ -256,21 +256,15 @@ td[data-tooltip]:hover::after{left:20%;transform:translateX(-20%)}
       Leads que existem nos dois funis (identificados por telefone/email) e cujo score sofreu alguma alteração — subida, rebaixamento ou preenchimento novo/perdido. Também mostro o score que a régua deveria retornar dadas as respostas do formulário.
     </p>
 
-    <div class="grid grid-3" style="margin-bottom:18px">
+    <div class="grid grid-2" style="margin-bottom:18px">
       <div class="card" data-tooltip="Leads Closer que têm correspondência no SDR (via telefone/email). De 260 leads Closer, 199 fizeram match.">
         <div class="k">Match SDR × Closer</div>
         <div class="disp" style="font-size:34px;margin-top:6px">199 <span style="color:var(--fg-dim);font-size:16px">/ 260</span></div>
         <div class="muted" style="font-size:13px;margin-top:6px">76,5% dos Closer batem com o SDR</div>
       </div>
-      <div class="card" data-tooltip="Leads Closer sem correspondência no SDR: entraram direto (indicação, cliente IBR, upload manual) ou perderam a chave de conciliação.">
-        <div class="k">Sem match</div>
-        <div class="disp" style="font-size:34px;margin-top:6px">61</div>
-        <div class="muted" style="font-size:13px;margin-top:6px">Entraram direto no Closer</div>
-      </div>
       <div class="card" data-tooltip="Total de leads no cruzamento com alteração de valor, preenchimento novo (SDR vazio → Closer preenchido) ou perda (SDR preenchido → Closer vazio).">
-        <div class="k">Total com mudança</div>
+        <div class="k">Total com mudança de score</div>
         <div class="disp" style="font-size:34px;margin-top:6px">58</div>
-        <div class="muted" style="font-size:13px;margin-top:6px">Colunas D–H da planilha</div>
       </div>
     </div>
 
@@ -278,10 +272,11 @@ td[data-tooltip]:hover::after{left:20%;transform:translateX(-20%)}
       <table>
         <thead>
           <tr>
-            <th style="width:110px">Score SDR</th>
-            <th style="width:110px">Score Closer</th>
-            <th style="width:220px">Mudança</th>
-            <th style="width:160px" data-tooltip="Score que a régua atual retorna para essas respostas do formulário. Compara o que o CRM aplicou vs o que a régua manda.">Esperado (régua)</th>
+            <th style="width:220px">Lead</th>
+            <th style="width:100px">Score SDR</th>
+            <th style="width:100px">Score Closer</th>
+            <th style="width:200px">Mudança</th>
+            <th style="width:150px" data-tooltip="Score que a régua atual retorna para essas respostas do formulário. Compara o que o CRM aplicou vs o que a régua manda.">Esperado (régua)</th>
             <th>Motivo da régua</th>
           </tr>
         </thead>
@@ -455,24 +450,24 @@ td[data-tooltip]:hover::after{left:20%;transform:translateX(-20%)}
 <script>
 // ================= DADOS =================
 const MUD = /*json*/[
-  {"Score_SDR":"C","Score_Closer":"F","Mudanca":"⬇ rebaixou (C→F)","Score_esperado_regra":"E","Motivo_regra":"sem interesse claro + investe >R$ 7.000"},
-  {"Score_SDR":"C","Score_Closer":"F","Mudanca":"⬇ rebaixou (C→F)","Score_esperado_regra":"C","Motivo_regra":"nunca hospedou + primeira exp + >R$7k + viaja"},
-  {"Score_SDR":"E","Score_Closer":"F","Mudanca":"⬇ rebaixou (E→F)","Score_esperado_regra":"?","Motivo_regra":"dados incompletos: intenção"},
-  {"Score_SDR":"B","Score_Closer":"A","Mudanca":"⬆ subiu (B→A)","Score_esperado_regra":"B","Motivo_regra":"já hospedou + continuar + R$7-10k + viaja"},
-  {"Score_SDR":"C","Score_Closer":"A","Mudanca":"⬆ subiu (C→A)","Score_esperado_regra":"C","Motivo_regra":"nunca hospedou + primeira exp + >R$7k + viaja"},
-  {"Score_SDR":"C","Score_Closer":"A","Mudanca":"⬆ subiu (C→A)","Score_esperado_regra":"B","Motivo_regra":"já hospedou + continuar + R$7-10k + viaja"},
-  {"Score_SDR":"E","Score_Closer":"B","Mudanca":"⬆ subiu (E→B)","Score_esperado_regra":"E","Motivo_regra":"sem interesse claro + investe >R$ 7.000"},
-  {"Score_SDR":"E","Score_Closer":"B","Mudanca":"⬆ subiu (E→B)","Score_esperado_regra":"E","Motivo_regra":"sem interesse claro + investe >R$ 7.000"},
-  {"Score_SDR":"F","Score_Closer":"A","Mudanca":"⬆ subiu (F→A)","Score_esperado_regra":"F","Motivo_regra":"investe até R$ 7.000/ano (regra F prevalece)"},
-  {"Score_SDR":"F","Score_Closer":"B","Mudanca":"⬆ subiu (F→B)","Score_esperado_regra":"F","Motivo_regra":"investe até R$ 7.000/ano (regra F prevalece)"},
-  {"Score_SDR":"F","Score_Closer":"B","Mudanca":"⬆ subiu (F→B)","Score_esperado_regra":"F","Motivo_regra":"investe até R$ 7.000/ano (regra F prevalece)"},
-  {"Score_SDR":"F","Score_Closer":"B","Mudanca":"⬆ subiu (F→B)","Score_esperado_regra":"F","Motivo_regra":"investe até R$ 7.000/ano (regra F prevalece)"},
-  {"Score_SDR":"F","Score_Closer":"B","Mudanca":"⬆ subiu (F→B)","Score_esperado_regra":"?","Motivo_regra":"dados incompletos: investimento, intenção, já hospedou, frequência"},
-  {"Score_SDR":"F","Score_Closer":"C","Mudanca":"⬆ subiu (F→C)","Score_esperado_regra":"F","Motivo_regra":"investe até R$ 7.000/ano (regra F prevalece)"},
-  {"Score_SDR":"F","Score_Closer":"C","Mudanca":"⬆ subiu (F→C)","Score_esperado_regra":"F","Motivo_regra":"investe até R$ 7.000/ano (regra F prevalece)"},
-  {"Score_SDR":"F","Score_Closer":"C","Mudanca":"⬆ subiu (F→C)","Score_esperado_regra":"F","Motivo_regra":"investe até R$ 7.000/ano (regra F prevalece)"}
+  {"Nome":"Eduardo Melo","Score_SDR":"C","Score_Closer":"F","Mudanca":"⬇ rebaixou (C→F)","Score_esperado_regra":"E","Motivo_regra":"sem interesse claro + investe >R$ 7.000"},
+  {"Nome":"GILMAR DE Araújo","Score_SDR":"C","Score_Closer":"F","Mudanca":"⬇ rebaixou (C→F)","Score_esperado_regra":"C","Motivo_regra":"nunca hospedou + primeira exp + >R$7k + viaja"},
+  {"Nome":"Joelma Goncalves de Oliveira Matos","Score_SDR":"E","Score_Closer":"F","Mudanca":"⬇ rebaixou (E→F)","Score_esperado_regra":"?","Motivo_regra":"dados incompletos: intenção"},
+  {"Nome":"Henrique","Score_SDR":"B","Score_Closer":"A","Mudanca":"⬆ subiu (B→A)","Score_esperado_regra":"B","Motivo_regra":"já hospedou + continuar + R$7-10k + viaja"},
+  {"Nome":"Francisco Oliveira","Score_SDR":"C","Score_Closer":"A","Mudanca":"⬆ subiu (C→A)","Score_esperado_regra":"C","Motivo_regra":"nunca hospedou + primeira exp + >R$7k + viaja"},
+  {"Nome":"Marcelo Melo","Score_SDR":"C","Score_Closer":"A","Mudanca":"⬆ subiu (C→A)","Score_esperado_regra":"B","Motivo_regra":"já hospedou + continuar + R$7-10k + viaja"},
+  {"Nome":"Everaldo matos","Score_SDR":"E","Score_Closer":"B","Mudanca":"⬆ subiu (E→B)","Score_esperado_regra":"E","Motivo_regra":"sem interesse claro + investe >R$ 7.000"},
+  {"Nome":"Jeann","Score_SDR":"E","Score_Closer":"B","Mudanca":"⬆ subiu (E→B)","Score_esperado_regra":"E","Motivo_regra":"sem interesse claro + investe >R$ 7.000"},
+  {"Nome":"REGIANE DE LIMA","Score_SDR":"F","Score_Closer":"A","Mudanca":"⬆ subiu (F→A)","Score_esperado_regra":"F","Motivo_regra":"investe até R$ 7.000/ano (regra F prevalece)"},
+  {"Nome":"Pollyana Scaquette","Score_SDR":"F","Score_Closer":"B","Mudanca":"⬆ subiu (F→B)","Score_esperado_regra":"F","Motivo_regra":"investe até R$ 7.000/ano (regra F prevalece)"},
+  {"Nome":"Lu","Score_SDR":"F","Score_Closer":"B","Mudanca":"⬆ subiu (F→B)","Score_esperado_regra":"F","Motivo_regra":"investe até R$ 7.000/ano (regra F prevalece)"},
+  {"Nome":"Josiane Martins","Score_SDR":"F","Score_Closer":"B","Mudanca":"⬆ subiu (F→B)","Score_esperado_regra":"F","Motivo_regra":"investe até R$ 7.000/ano (regra F prevalece)"},
+  {"Nome":"Fabio Silva Guimarães Marques","Score_SDR":"F","Score_Closer":"B","Mudanca":"⬆ subiu (F→B)","Score_esperado_regra":"?","Motivo_regra":"dados incompletos: investimento, intenção, já hospedou, frequência"},
+  {"Nome":"Jean gregorio","Score_SDR":"F","Score_Closer":"C","Mudanca":"⬆ subiu (F→C)","Score_esperado_regra":"F","Motivo_regra":"investe até R$ 7.000/ano (regra F prevalece)"},
+  {"Nome":"Edimilson","Score_SDR":"F","Score_Closer":"C","Mudanca":"⬆ subiu (F→C)","Score_esperado_regra":"F","Motivo_regra":"investe até R$ 7.000/ano (regra F prevalece)"},
+  {"Nome":"Flávio Serri","Score_SDR":"F","Score_Closer":"C","Mudanca":"⬆ subiu (F→C)","Score_esperado_regra":"F","Motivo_regra":"investe até R$ 7.000/ano (regra F prevalece)"}
 ];
-const MUD_EXTRA_HTML = `<tr><td colspan="5" style="text-align:center;color:var(--fg-dim);padding:16px;font-size:13px">+ 42 leads onde Closer apagou/preencheu score sem alterar a régua — planilha completa: <span style="color:var(--fg)">IMR – Leads que mudaram de Score.xlsx</span></td></tr>`;
+const MUD_EXTRA_HTML = `<tr><td colspan="6" style="text-align:center;color:var(--fg-dim);padding:16px;font-size:13px">+ 42 leads onde Closer apagou/preencheu score sem alterar a régua — planilha completa: <span style="color:var(--fg)">IMR – Leads que mudaram de Score.xlsx</span></td></tr>`;
 
 const CONV_SDR = [
   {"Lead score":"A","Leads":149,"Compradores":1,"Conversão %":0.67},
@@ -536,6 +531,7 @@ const mudBody = document.getElementById('mud-body');
 MUD.forEach(row => {
   mudBody.insertAdjacentHTML('beforeend', `
     <tr>
+      <td style="font-weight:600">${row.Nome}</td>
       <td>${scoreChip(row.Score_SDR)}</td>
       <td>${scoreChip(row.Score_Closer)}</td>
       <td class="mud ${mudClass(row.Mudanca)}">${row.Mudanca}</td>
