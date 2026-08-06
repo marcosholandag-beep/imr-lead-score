@@ -209,10 +209,10 @@ td[data-tooltip]:hover::after{left:20%;transform:translateX(-20%)}
   <section class="header">
     <div class="kicker">IMR · Ipioca Mar Resort · Análise de Lead Score</div>
     <h1>Lead Score<span class="star">✦</span></h1>
-    <div class="periodo" data-tooltip="Janela dos dados analisados: leads criados no funil SDR entre 22/12/2025 e 30/07/2026 (2.048 registros), cruzados com as 32 vendas ganhas no funil Closer (06/01/2026 até 29/07/2026).">
+    <div class="periodo" data-tooltip="Janela dos dados analisados: leads criados no funil SDR entre 22/12/2025 e 30/07/2026 (2.048 registros), cruzados com 34 vendas ganhas no funil Closer (06/01/2026 até 05/08/2026, com 2 vendas de agosto).">
       <span class="periodo-k">Período analisado</span>
-      <span class="periodo-v">06 jan, 2026 a 30 jul, 2026</span>
-      <span class="periodo-d">7 meses · 2.048 leads SDR · 260 leads Closer · 32 vendas</span>
+      <span class="periodo-v">06 jan, 2026 a 05 ago, 2026</span>
+      <span class="periodo-d">7 meses · 2.048 leads SDR · 260 leads Closer · 34 vendas</span>
     </div>
     <p class="sub">Coerência da régua atual, mudanças SDR × Closer, taxas de conversão reais e uma nova sugestão de pontuação, construída a partir das respostas dos 32 compradores.</p>
 
@@ -225,8 +225,8 @@ td[data-tooltip]:hover::after{left:20%;transform:translateX(-20%)}
         <span class="c-n">260</span>
         <span class="c-l">Leads no funil Closer</span>
       </div>
-      <div class="chip" data-tooltip="Compradores no período, arquivo Kommo · IMR · etapa Venda ganha.">
-        <span class="c-n">32</span>
+      <div class="chip" data-tooltip="Compradores no período, arquivo Kommo · IMR · etapa Venda ganha. Inclui 2 vendas fechadas em 05/08/2026 (Urias e Andreia).">
+        <span class="c-n">34</span>
         <span class="c-l">Compradores no período</span>
       </div>
       <div class="chip" data-tooltip="Taxa média = 29 compradores identificados ÷ 2.059 leads no universo (SDR + compradores que entraram direto).">
@@ -478,9 +478,9 @@ td[data-tooltip]:hover::after{left:20%;transform:translateX(-20%)}
     </div>
 
     <!-- ================ CASOS REAIS ================ -->
-    <h3 style="margin:56px 0 8px;font-size:24px">Casos reais, três compradores</h3>
+    <h3 style="margin:56px 0 8px;font-size:24px">Casos reais, cinco compradores</h3>
     <p class="muted" style="font-size:15px;max-width:900px;margin-bottom:20px;line-height:1.5">
-      Três clientes que fecharam venda, com as mesmas respostas no formulário passando pelos dois funis. Mostra o que o CRM registrou, o que a régua antiga <b>deveria</b> ter retornado, e onde a nova régua colocaria cada um.
+      Cinco clientes que fecharam venda, com as mesmas respostas no formulário passando pelos dois funis. Mostra o que o CRM registrou, o que a régua antiga <b>deveria</b> ter retornado, e onde a nova régua colocaria cada um.
     </p>
 
     <div class="casos-grid" id="casos-body"></div>
@@ -488,7 +488,7 @@ td[data-tooltip]:hover::after{left:20%;transform:translateX(-20%)}
 
 
   <div class="footer">
-    IMR · Ipioca Mar Resort · Análise interna Trilha Performance Digital · Período: 06 jan, 2026 a 30 jul, 2026 (7 meses) · Fonte: exports Kommo (SDR, Closer, Vendas). Cruzamentos por telefone/email normalizado.
+    IMR · Ipioca Mar Resort · Análise interna Trilha Performance Digital · Período: 06 jan, 2026 a 05 ago, 2026 (7 meses) · Fonte: exports Kommo (SDR, Closer, Vendas). Cruzamentos por telefone/email normalizado.
   </div>
 
 </main>
@@ -755,6 +755,44 @@ const CASOS = [
     scoreNovo: "D",
     scoreNovoPontos: 52,
     scoreNovoDetalhe: "0 (intenção vazia) + 22 (R$ 7-10k) + 10 (não viaja todos anos) + 10 (Não hospedou) + 10 (Meta Ads) = 52 pts → D"
+  },
+  {
+    nome: "Urias Silva Vasconcelos",
+    ticket: "R$ 32.787",
+    respostas: {
+      "Já hospedou":  "Não",
+      "Intenção":     "Gostaria de ter minha primeira experiência",
+      "Frequência":   "Mais de 1 vez por ano",
+      "Investimento": "Entre R$ 5.001 e R$ 7.000",
+      "Origem":       "Meta Ads"
+    },
+    obs: "Fechou em 05/08/2026. CRM classificou como F pelo corte financeiro (investe até R$ 7k). Comprou. Pela nova régua, todas as outras respostas somam pontuação máxima e o levam pra A.",
+    scoreSDR: "?",
+    scoreCloser: "F",
+    scoreAntigaEsperado: "F",
+    scoreAntigaMotivo: "Investe até R$ 7.000/ano, regra F prevalece.",
+    scoreNovo: "A",
+    scoreNovoPontos: 85,
+    scoreNovoDetalhe: "30 (primeira exp) + 15 (R$ 5-7k) + 20 (mais de 1x/ano) + 10 (Não hospedou) + 10 (Meta Ads) = 85 pts → A"
+  },
+  {
+    nome: "Andreia Espíndola",
+    ticket: "R$ 33.457",
+    respostas: {
+      "Já hospedou":  "Não",
+      "Intenção":     "Gostaria de ter minha primeira experiência",
+      "Frequência":   "1 vez por ano",
+      "Investimento": "Entre R$ 5.001 e R$ 7.000",
+      "Origem":       "Meta Ads"
+    },
+    obs: "Fechou em 05/08/2026. Mesmo padrão do Urias: CRM descartou como F pelo bolso, mas todas as outras respostas gritam intenção de compra. Nova régua coloca em A.",
+    scoreSDR: "?",
+    scoreCloser: "F",
+    scoreAntigaEsperado: "F",
+    scoreAntigaMotivo: "Investe até R$ 7.000/ano, regra F prevalece.",
+    scoreNovo: "A",
+    scoreNovoPontos: 85,
+    scoreNovoDetalhe: "30 (primeira exp) + 15 (R$ 5-7k) + 20 (1x/ano) + 10 (Não hospedou) + 10 (Meta Ads) = 85 pts → A"
   }
 ];
 
