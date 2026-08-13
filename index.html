@@ -209,12 +209,12 @@ td[data-tooltip]:hover::after{left:20%;transform:translateX(-20%)}
   <section class="header">
     <div class="kicker">IMR · Ipioca Mar Resort · Análise de Lead Score</div>
     <h1>Lead Score<span class="star">✦</span></h1>
-    <div class="periodo" data-tooltip="Janela dos dados analisados: leads criados no funil SDR entre 22/12/2025 e 13/08/2026 (2.295 registros) e no funil Closer (1.119 registros), cruzados com 587 vendas únicas.">
+    <div class="periodo" data-tooltip="Janela dos dados analisados: leads criados no funil SDR entre 22/12/2025 e 13/08/2026 (2.295 registros) e no funil Closer (1.119 registros). Vendas contadas = Venda ganha no funil Closer.">
       <span class="periodo-k">Período analisado</span>
       <span class="periodo-v">22 dez, 2025 a 13 ago, 2026</span>
-      <span class="periodo-d">8 meses · 2.295 leads SDR · 1.119 leads Closer · 587 vendas</span>
+      <span class="periodo-d">8 meses · 2.295 leads SDR · 1.119 leads Closer · 36 vendas Closer</span>
     </div>
-    <p class="sub">Coerência da régua atual, mudanças SDR × Closer, taxas de conversão reais e uma nova sugestão de pontuação, construída a partir das respostas dos 587 compradores.</p>
+    <p class="sub">Coerência da régua atual, mudanças SDR × Closer, taxas de conversão reais e uma nova sugestão de pontuação, construída a partir das respostas dos compradores.</p>
 
     <div class="chips">
       <div class="chip" data-tooltip="Todos os leads no funil SDR entre 22/12/2025 e 13/08/2026.">
@@ -225,12 +225,12 @@ td[data-tooltip]:hover::after{left:20%;transform:translateX(-20%)}
         <span class="c-n">1.119</span>
         <span class="c-l">Leads no funil Closer</span>
       </div>
-      <div class="chip" data-tooltip="Vendas ganhas únicas (deduplicadas por telefone/email) considerando os dois funis.">
-        <span class="c-n">587</span>
-        <span class="c-l">Compradores no período</span>
+      <div class="chip" data-tooltip="Vendas ganhas no funil Closer (etapa 'Venda ganha'). Definição usada como numerador em todas as taxas de conversão.">
+        <span class="c-n">36</span>
+        <span class="c-l">Vendas no Closer</span>
       </div>
-      <div class="chip" data-tooltip="Taxa média = 587 compradores ÷ 2.299 leads no universo (SDR + compradores que entraram direto no Closer sem passar pelo SDR).">
-        <span class="c-n">25,53%</span>
+      <div class="chip" data-tooltip="Taxa média = 36 vendas Closer ÷ 2.306 leads no universo (SDR + compradores que entraram direto no Closer sem passar pelo SDR).">
+        <span class="c-n">1,56%</span>
         <span class="c-l">Taxa média de conversão</span>
       </div>
     </div>
@@ -332,49 +332,49 @@ td[data-tooltip]:hover::after{left:20%;transform:translateX(-20%)}
       </div>
     </div>
     <p class="muted" style="margin-bottom:24px;max-width:900px;font-size:15px">
-      Denominador = leads no funil (SDR ou Closer, respectivamente). Numerador = quantos desses leads viraram <b>Venda ganha</b> no Kommo, identificados por telefone/email. Cruzei os 32 compradores contra as duas bases separadamente.
+      Denominador = leads no funil (SDR ou Closer, respectivamente). Numerador = quantos desses leads viraram <b>Venda ganha no funil Closer</b> (etapa oficial de venda fechada). Total de vendas Closer no período: <b>36</b>.
     </p>
 
     <div class="compare">
       <!-- SDR -->
       <div class="card">
         <h3>Funil SDR</h3>
-        <div class="tiny" style="margin-bottom:14px">2.295 leads · 624 identificados como comprador</div>
+        <div class="tiny" style="margin-bottom:14px">2.295 leads · 25 viraram venda no Closer</div>
         <table>
           <thead>
             <tr>
               <th>Score</th>
               <th class="n">Leads</th>
-              <th class="n" data-tooltip="% que essa faixa representa dentro dos 2.048 leads do funil SDR.">% do total</th>
-              <th class="n">Compradores</th>
+              <th class="n" data-tooltip="% que essa faixa representa dentro dos 2.295 leads do funil SDR.">% do total</th>
+              <th class="n">Vendas Closer</th>
               <th class="n">Conversão</th>
             </tr>
           </thead>
           <tbody id="conv-sdr-body"></tbody>
         </table>
         <div class="callout" style="margin-top:16px;padding:14px 16px">
-          <p style="font-size:13px;color:var(--fg-dim);line-height:1.5"><b style="color:var(--fg)">Insight:</b> Score A e B convertem &gt;62% no SDR (versus taxa base de 25%). F ainda gera 146 vendas em 548 leads (27%), volume expressivo.</p>
+          <p style="font-size:13px;color:var(--fg-dim);line-height:1.5"><b style="color:var(--fg)">Insight:</b> Faixas com mais leads acabam gerando mais vendas em volume, mas em % E converte melhor (5,9%). A régua atual não distingue bem quem vira venda no Closer, o funil SDR é grande e a régua é fraca no topo.</p>
         </div>
       </div>
 
       <!-- CLOSER -->
       <div class="card">
         <h3>Funil Closer</h3>
-        <div class="tiny" style="margin-bottom:14px">1.119 leads · 641 identificados como comprador</div>
+        <div class="tiny" style="margin-bottom:14px">1.119 leads · 46 cards match com as 36 vendas (alguns leads têm cards duplicados)</div>
         <table>
           <thead>
             <tr>
               <th>Score</th>
               <th class="n">Leads</th>
-              <th class="n" data-tooltip="% que essa faixa representa dentro dos 260 leads do funil Closer.">% do total</th>
-              <th class="n">Compradores</th>
+              <th class="n" data-tooltip="% que essa faixa representa dentro dos 1.119 leads do funil Closer.">% do total</th>
+              <th class="n">Vendas Closer</th>
               <th class="n">Conversão</th>
             </tr>
           </thead>
           <tbody id="conv-closer-body"></tbody>
         </table>
         <div class="callout" style="margin-top:16px;padding:14px 16px">
-          <p style="font-size:13px;color:var(--fg-dim);line-height:1.5"><b style="color:var(--fg)">Insight:</b> No Closer, praticamente 100% de conversão em todas as faixas com score preenchido. Só entra no Closer quem já foi qualificado, o funil é filtrado.</p>
+          <p style="font-size:13px;color:var(--fg-dim);line-height:1.5"><b style="color:var(--fg)">Insight:</b> B é a faixa mais produtiva (7,24%), seguida de C (6,90%). F ainda entrega 5,76% de conversão dentro do Closer, prova de que o corte financeiro descarta boas vendas.</p>
         </div>
       </div>
     </div>
@@ -443,14 +443,14 @@ td[data-tooltip]:hover::after{left:20%;transform:translateX(-20%)}
     <!-- ================ COMPARATIVO DA MUDANÇA ================ -->
     <h3 style="margin:52px 0 8px;font-size:24px">Comparativo, antes × depois</h3>
     <p class="muted" style="font-size:15px;max-width:900px;margin-bottom:20px">
-      Aplicando as duas réguas no mesmo universo (SDR + compradores que entraram direto = 2.303 leads · 587 compradores identificados por dedup exato).
+      Aplicando as duas réguas no mesmo universo (SDR + vendas Closer que entraram direto = 2.306 leads · 36 vendas Closer no período).
     </p>
 
     <div class="compare">
       <!-- Antiga -->
       <div class="card">
         <h3>Régua antiga</h3>
-        <div class="tiny" style="margin-bottom:14px">Cobertura: <b style="color:var(--fg)">29%</b> · deixa 1.624 leads como "?"</div>
+        <div class="tiny" style="margin-bottom:14px">Cobertura: <b style="color:var(--fg)">29%</b> · deixa 1.627 leads como "?"</div>
         <table>
           <thead>
             <tr><th>Score</th><th class="n">Leads</th><th class="n">Compradores</th><th class="n">Conversão</th></tr>
@@ -474,7 +474,7 @@ td[data-tooltip]:hover::after{left:20%;transform:translateX(-20%)}
 
     <div class="callout">
       <h4>O que mudou</h4>
-      <p><b>Cobertura sobe de 29% para 100%.</b> A régua antiga deixa 61% dos compradores em "?" (358 em 587 sem classificação). A nova classifica todos, com <b>A convertendo 47%</b> e <b>B a 39%</b> vs taxa média do universo de 25%.</p>
+      <p><b>Cobertura sobe de 29% para 100%.</b> A régua antiga deixa 61% das vendas em "?" (22 das 36 sem classificação). A nova classifica todos, com <b>C convertendo 4,52%</b> e <b>D a 3,66%</b> vs taxa base de 1,56%, quase 3x acima.</p>
     </div>
 
     <!-- ================ CASOS REAIS ================ -->
@@ -560,39 +560,40 @@ const MUD = /*json*/[{"Nome": "Daniel Renan", "Score_SDR": "F", "Score_Closer": 
 const MUD_EXTRA_HTML = `<tr><td colspan="6" style="text-align:center;color:var(--fg-dim);padding:16px;font-size:13px">+ 120 leads onde Closer apagou/preencheu score sem alterar a régua, planilha completa: <span style="color:var(--fg)">IMR, Leads que mudaram de Score.xlsx</span></td></tr>`;
 
 const CONV_SDR = [
-  {"Lead score":"A","Leads":167,"Compradores":105,"Conversão %":62.87},
-  {"Lead score":"B","Leads":299,"Compradores":186,"Conversão %":62.21},
-  {"Lead score":"C","Leads":121,"Compradores":59,"Conversão %":48.76},
-  {"Lead score":"D","Leads":10,"Compradores":5,"Conversão %":50.00},
-  {"Lead score":"E","Leads":34,"Compradores":21,"Conversão %":61.76},
-  {"Lead score":"F","Leads":548,"Compradores":146,"Conversão %":26.64},
-  {"Lead score":"Sem score","Leads":1116,"Compradores":102,"Conversão %":9.14}
+  {"Lead score":"A","Leads":167,"Compradores":1,"Conversão %":0.60},
+  {"Lead score":"B","Leads":299,"Compradores":6,"Conversão %":2.01},
+  {"Lead score":"C","Leads":121,"Compradores":3,"Conversão %":2.48},
+  {"Lead score":"D","Leads":10,"Compradores":0,"Conversão %":0.00},
+  {"Lead score":"E","Leads":34,"Compradores":2,"Conversão %":5.88},
+  {"Lead score":"F","Leads":548,"Compradores":9,"Conversão %":1.64},
+  {"Lead score":"Sem score","Leads":1116,"Compradores":4,"Conversão %":0.36}
 ];
 const CONV_CLOSER = [
-  {"Lead score":"A","Leads":95,"Compradores":95,"Conversão %":100.00},
-  {"Lead score":"B","Leads":152,"Compradores":148,"Conversão %":97.37},
-  {"Lead score":"C","Leads":58,"Compradores":58,"Conversão %":100.00},
-  {"Lead score":"D","Leads":5,"Compradores":5,"Conversão %":100.00},
-  {"Lead score":"E","Leads":17,"Compradores":16,"Conversão %":94.12},
-  {"Lead score":"F","Leads":139,"Compradores":139,"Conversão %":100.00},
-  {"Lead score":"Sem score","Leads":650,"Compradores":175,"Conversão %":26.92}
+  {"Lead score":"A","Leads":95,"Compradores":4,"Conversão %":4.21},
+  {"Lead score":"B","Leads":152,"Compradores":11,"Conversão %":7.24},
+  {"Lead score":"C","Leads":58,"Compradores":4,"Conversão %":6.90},
+  {"Lead score":"D","Leads":5,"Compradores":0,"Conversão %":0.00},
+  {"Lead score":"E","Leads":17,"Compradores":1,"Conversão %":5.88},
+  {"Lead score":"F","Leads":139,"Compradores":8,"Conversão %":5.76},
+  {"Lead score":"Sem score","Leads":650,"Compradores":18,"Conversão %":2.77},
+  {"Lead score":"Atualizar","Leads":3,"Compradores":0,"Conversão %":0.00}
 ];
 const CONV_NEW = [
-  {"Score":"A","Leads":338,"Compradores":159,"Conversão %":47.04},
-  {"Score":"B","Leads":225,"Compradores":87,"Conversão %":38.67},
-  {"Score":"C","Leads":155,"Compradores":56,"Conversão %":36.13},
-  {"Score":"D","Leads":81,"Compradores":17,"Conversão %":20.99},
-  {"Score":"E","Leads":116,"Compradores":48,"Conversão %":41.38},
-  {"Score":"F","Leads":1388,"Compradores":265,"Conversão %":19.09}
+  {"Score":"A","Leads":338,"Compradores":7,"Conversão %":2.07},
+  {"Score":"B","Leads":225,"Compradores":5,"Conversão %":2.22},
+  {"Score":"C","Leads":155,"Compradores":7,"Conversão %":4.52},
+  {"Score":"D","Leads":82,"Compradores":3,"Conversão %":3.66},
+  {"Score":"E","Leads":116,"Compradores":0,"Conversão %":0.00},
+  {"Score":"F","Leads":1390,"Compradores":14,"Conversão %":1.01}
 ];
 const CONV_OLD = [
-  {"Score":"?","Leads":1624,"Compradores":358,"Conversão %":22.04},
-  {"Score":"A","Leads":78,"Compradores":37,"Conversão %":47.44},
-  {"Score":"B","Leads":106,"Compradores":59,"Conversão %":55.66},
-  {"Score":"C","Leads":60,"Compradores":30,"Conversão %":50.00},
-  {"Score":"D","Leads":2,"Compradores":1,"Conversão %":50.00},
-  {"Score":"E","Leads":41,"Compradores":21,"Conversão %":51.22},
-  {"Score":"F","Leads":392,"Compradores":126,"Conversão %":32.14}
+  {"Score":"?","Leads":1627,"Compradores":22,"Conversão %":1.35},
+  {"Score":"A","Leads":78,"Compradores":1,"Conversão %":1.28},
+  {"Score":"B","Leads":106,"Compradores":2,"Conversão %":1.89},
+  {"Score":"C","Leads":60,"Compradores":2,"Conversão %":3.33},
+  {"Score":"D","Leads":2,"Compradores":0,"Conversão %":0.00},
+  {"Score":"E","Leads":41,"Compradores":2,"Conversão %":4.88},
+  {"Score":"F","Leads":392,"Compradores":7,"Conversão %":1.79}
 ];
 
 // ================= HELPERS =================
