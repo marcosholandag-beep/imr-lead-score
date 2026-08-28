@@ -209,10 +209,10 @@ td[data-tooltip]:hover::after{left:20%;transform:translateX(-20%)}
   <section class="header">
     <div class="kicker">IMR · Ipioca Mar Resort · Análise de Lead Score</div>
     <h1>Lead Score<span class="star">✦</span></h1>
-    <div class="periodo" data-tooltip="Janela dos dados analisados: leads criados no funil SDR entre 22/12/2025 e 13/08/2026 (2.295 registros) e no funil Closer (1.119 registros). Vendas contadas = Venda ganha no funil Closer.">
+    <div class="periodo" data-tooltip="Janela dos dados analisados: leads criados no funil SDR entre 22/12/2025 e 13/08/2026 (2.295 registros) e no funil Closer (1.312 registros). Vendas contadas = Venda ganha no funil Closer.">
       <span class="periodo-k">Período analisado</span>
-      <span class="periodo-v">22 dez, 2025 a 13 ago, 2026</span>
-      <span class="periodo-d">8 meses · 2.295 leads SDR · 1.119 leads Closer · 36 vendas Closer</span>
+      <span class="periodo-v">22 dez, 2025 a 28 ago, 2026</span>
+      <span class="periodo-d">8 meses · 2.295 leads SDR · 1.119 leads Closer · 41 vendas Closer</span>
     </div>
     <p class="sub">Coerência da régua atual, mudanças SDR × Closer, taxas de conversão reais e uma nova sugestão de pontuação, construída a partir das respostas dos compradores.</p>
 
@@ -222,15 +222,15 @@ td[data-tooltip]:hover::after{left:20%;transform:translateX(-20%)}
         <span class="c-l">Leads no funil SDR</span>
       </div>
       <div class="chip" data-tooltip="Todos os leads no funil Closer no mesmo período.">
-        <span class="c-n">1.119</span>
+        <span class="c-n">1.312</span>
         <span class="c-l">Leads no funil Closer</span>
       </div>
       <div class="chip" data-tooltip="Vendas ganhas no funil Closer (etapa 'Venda ganha'). Definição usada como numerador em todas as taxas de conversão.">
-        <span class="c-n">36</span>
+        <span class="c-n">41</span>
         <span class="c-l">Vendas no Closer</span>
       </div>
-      <div class="chip" data-tooltip="Taxa média = 36 vendas Closer ÷ 2.306 leads no universo (SDR + compradores que entraram direto no Closer sem passar pelo SDR).">
-        <span class="c-n">1,56%</span>
+      <div class="chip" data-tooltip="Taxa média = 41 vendas Closer ÷ 2.308 leads no universo (SDR + compradores que entraram direto no Closer sem passar pelo SDR).">
+        <span class="c-n">1,73%</span>
         <span class="c-l">Taxa média de conversão</span>
       </div>
     </div>
@@ -293,7 +293,7 @@ td[data-tooltip]:hover::after{left:20%;transform:translateX(-20%)}
     </p>
 
     <div class="grid grid-2" style="margin-bottom:18px">
-      <div class="card" data-tooltip="Leads Closer que têm correspondência no SDR (via telefone/email). De 1.119 leads Closer, 713 fizeram match.">
+      <div class="card" data-tooltip="Leads Closer que têm correspondência no SDR (via telefone/email). De 1.312 leads Closer, valor não recalculado (SDR de 13/08 usado como fallback).">
         <div class="k">Match SDR × Closer</div>
         <div class="disp" style="font-size:34px;margin-top:6px">713 <span style="color:var(--fg-dim);font-size:16px">/ 1.119</span></div>
         <div class="muted" style="font-size:13px;margin-top:6px">63,7% dos Closer batem com o SDR</div>
@@ -339,7 +339,7 @@ td[data-tooltip]:hover::after{left:20%;transform:translateX(-20%)}
       <!-- SDR -->
       <div class="card">
         <h3>Funil SDR</h3>
-        <div class="tiny" style="margin-bottom:14px">2.295 leads · 25 viraram venda no Closer</div>
+        <div class="tiny" style="margin-bottom:14px">2.295 leads · 27 viraram venda no Closer (SDR base 13/08)</div>
         <table>
           <thead>
             <tr>
@@ -360,7 +360,7 @@ td[data-tooltip]:hover::after{left:20%;transform:translateX(-20%)}
       <!-- CLOSER -->
       <div class="card">
         <h3>Funil Closer</h3>
-        <div class="tiny" style="margin-bottom:14px">1.119 leads · 36 vendas (soma da coluna Vendas Closer = 36 ✓)</div>
+        <div class="tiny" style="margin-bottom:14px">1.312 leads · 41 vendas (soma da coluna Vendas Closer = 41 ✓)</div>
         <table>
           <thead>
             <tr>
@@ -374,7 +374,7 @@ td[data-tooltip]:hover::after{left:20%;transform:translateX(-20%)}
           <tbody id="conv-closer-body"></tbody>
         </table>
         <div class="callout" style="margin-top:16px;padding:14px 16px">
-          <p style="font-size:13px;color:var(--fg-dim);line-height:1.5"><b style="color:var(--fg)">Insight:</b> B é a faixa mais produtiva (7,24%), seguida de C (6,90%). F ainda entrega 5,76% de conversão dentro do Closer, prova de que o corte financeiro descarta boas vendas.</p>
+          <p style="font-size:13px;color:var(--fg-dim);line-height:1.5"><b style="color:var(--fg)">Insight:</b> B é a faixa mais produtiva (8,05%), seguida de C (6,15%). F entrega 5,13% de conversão dentro do Closer, prova de que o corte financeiro descarta boas vendas.</p>
         </div>
       </div>
     </div>
@@ -443,7 +443,7 @@ td[data-tooltip]:hover::after{left:20%;transform:translateX(-20%)}
     <!-- ================ COMPARATIVO DA MUDANÇA ================ -->
     <h3 style="margin:52px 0 8px;font-size:24px">Comparativo, antes × depois</h3>
     <p class="muted" style="font-size:15px;max-width:900px;margin-bottom:20px">
-      Aplicando as duas réguas no mesmo universo (SDR + vendas Closer que entraram direto = 2.306 leads · 36 vendas Closer no período).
+      Aplicando as duas réguas no mesmo universo (SDR + vendas Closer que entraram direto = 2.308 leads · 41 vendas Closer no período).
     </p>
 
     <div class="compare">
@@ -474,7 +474,7 @@ td[data-tooltip]:hover::after{left:20%;transform:translateX(-20%)}
 
     <div class="callout">
       <h4>O que mudou</h4>
-      <p><b>Cobertura sobe de 29% para 100%.</b> A régua antiga deixa 61% das vendas em "?" (22 das 36 sem classificação). A nova classifica todos, com <b>C convertendo 4,52%</b> e <b>D a 3,66%</b> vs taxa base de 1,56%, quase 3x acima.</p>
+      <p><b>Cobertura sobe de 29% para 100%.</b> A régua antiga deixa 54% das vendas em "?" (22 das 41 sem classificação). A nova classifica todos, com <b>C convertendo 4,52%</b> e <b>D a 3,66%</b> vs taxa base de 1,73%, ~2,6x acima.</p>
     </div>
 
     <!-- ================ CASOS REAIS ================ -->
@@ -503,23 +503,23 @@ td[data-tooltip]:hover::after{left:20%;transform:translateX(-20%)}
     <div class="grid grid-3" style="margin-bottom:22px">
       <div class="card" data-tooltip="Compradores com Score = F no funil Closer (etapa Venda ganha) cuja nova régua atribui A, B, C ou D.">
         <div class="k">F que viram A/B/C/D</div>
-        <div class="disp" style="font-size:44px;margin-top:6px;color:var(--accent)">8</div>
+        <div class="disp" style="font-size:44px;margin-top:6px;color:var(--accent)">10</div>
         <div class="muted" style="font-size:13px;margin-top:6px">100% dos F Closer entram no corte da nova régua</div>
       </div>
       <div class="card" data-tooltip="% que essas 8 vendas representam do total de 36 vendas ganhas no funil Closer.">
         <div class="k">% das vendas do Closer</div>
-        <div class="disp" style="font-size:44px;margin-top:6px">22,2%</div>
-        <div class="muted" style="font-size:13px;margin-top:6px">8 em 36 vendas Closer</div>
+        <div class="disp" style="font-size:44px;margin-top:6px">24,4%</div>
+        <div class="muted" style="font-size:13px;margin-top:6px">10 em 41 vendas Closer</div>
       </div>
       <div class="card" data-tooltip="Distribuição dos 8 compradores pela nova régua. Todos entram no A/B/C/D (nenhum fica em E ou F).">
         <div class="k">Onde a nova régua os coloca</div>
         <div class="disp" style="font-size:20px;margin-top:6px;line-height:1.4">
           <span class="sc sc-A">A</span> 2 &nbsp;
-          <span class="sc sc-B">B</span> 2 &nbsp;
+          <span class="sc sc-B">B</span> 4 &nbsp;
           <span class="sc sc-C">C</span> 3 &nbsp;
           <span class="sc sc-D">D</span> 1
         </div>
-        <div class="muted" style="font-size:12px;margin-top:8px">Ticket total: R$ 290.666</div>
+        <div class="muted" style="font-size:12px;margin-top:8px">Ticket total: R$ 349.120</div>
       </div>
     </div>
 
@@ -543,13 +543,13 @@ td[data-tooltip]:hover::after{left:20%;transform:translateX(-20%)}
 
     <div class="callout">
       <h4>Leitura</h4>
-      <p><b>22% das vendas fechadas pelo Closer vieram de leads marcados como F, e 100% deles seriam requalificados como A, B, C ou D pela nova régua.</b> Os 8 compradores somam <b>R$ 290.666</b> em ticket. Quatro subiriam para A ou B (leads quentes), três para C e um para D. Nenhum ficaria em E ou F. Prova concreta de que o corte financeiro puro do investimento declarado está descartando compradores reais, todos investiram até R$ 7k no formulário e ainda assim fecharam.</p>
+      <p><b>24% das vendas fechadas pelo Closer vieram de leads marcados como F, e 100% deles seriam requalificados como A, B, C ou D pela nova régua.</b> Os 10 compradores somam <b>R$ 349.120</b> em ticket. Seis subiriam para A ou B (leads quentes), três para C e um para D. Nenhum ficaria em E ou F. Prova concreta de que o corte financeiro puro do investimento declarado está descartando compradores reais, todos investiram até R$ 7k no formulário e ainda assim fecharam.</p>
     </div>
   </section>
 
 
   <div class="footer">
-    IMR · Ipioca Mar Resort · Análise interna Trilha Performance Digital · Período: 22 dez, 2025 a 13 ago, 2026 (8 meses) · Fonte: exports Kommo (SDR, Closer). Cruzamentos por telefone/email normalizado. Atualizado em 13/08/2026.
+    IMR · Ipioca Mar Resort · Análise interna Trilha Performance Digital · Período: 22 dez, 2025 a 28 ago, 2026 (8 meses) · Fonte: exports Kommo (SDR, Closer). Cruzamentos por telefone/email normalizado. Atualizado em 28/08/2026 (SDR referência 13/08, novo export estava corrompido).
   </div>
 
 </main>
@@ -565,22 +565,22 @@ const CONV_SDR = [
   {"Lead score":"C","Leads":121,"Compradores":3,"Conversão %":2.48},
   {"Lead score":"D","Leads":10,"Compradores":0,"Conversão %":0.00},
   {"Lead score":"E","Leads":34,"Compradores":2,"Conversão %":5.88},
-  {"Lead score":"F","Leads":548,"Compradores":9,"Conversão %":1.64},
+  {"Lead score":"F","Leads":548,"Compradores":11,"Conversão %":2.01},
   {"Lead score":"Sem score","Leads":1116,"Compradores":4,"Conversão %":0.36}
 ];
 const CONV_CLOSER = [
-  {"Lead score":"A","Leads":95,"Compradores":4,"Conversão %":4.21},
-  {"Lead score":"B","Leads":152,"Compradores":11,"Conversão %":7.24},
-  {"Lead score":"C","Leads":58,"Compradores":4,"Conversão %":6.90},
+  {"Lead score":"A","Leads":108,"Compradores":4,"Conversão %":3.70},
+  {"Lead score":"B","Leads":174,"Compradores":14,"Conversão %":8.05},
+  {"Lead score":"C","Leads":65,"Compradores":4,"Conversão %":6.15},
   {"Lead score":"D","Leads":5,"Compradores":0,"Conversão %":0.00},
   {"Lead score":"E","Leads":17,"Compradores":1,"Conversão %":5.88},
-  {"Lead score":"F","Leads":139,"Compradores":8,"Conversão %":5.76},
-  {"Lead score":"Sem score","Leads":650,"Compradores":8,"Conversão %":1.23},
+  {"Lead score":"F","Leads":195,"Compradores":10,"Conversão %":5.13},
+  {"Lead score":"Sem score","Leads":745,"Compradores":8,"Conversão %":1.07},
   {"Lead score":"Atualizar","Leads":3,"Compradores":0,"Conversão %":0.00}
 ];
 const CONV_NEW = [
-  {"Score":"A","Leads":338,"Compradores":7,"Conversão %":2.07},
-  {"Score":"B","Leads":225,"Compradores":5,"Conversão %":2.22},
+  {"Score":"A","Leads":339,"Compradores":9,"Conversão %":2.65},
+  {"Score":"B","Leads":226,"Compradores":7,"Conversão %":3.10},
   {"Score":"C","Leads":155,"Compradores":7,"Conversão %":4.52},
   {"Score":"D","Leads":82,"Compradores":3,"Conversão %":3.66},
   {"Score":"E","Leads":116,"Compradores":0,"Conversão %":0.00},
@@ -590,10 +590,10 @@ const CONV_OLD = [
   {"Score":"?","Leads":1627,"Compradores":22,"Conversão %":1.35},
   {"Score":"A","Leads":78,"Compradores":1,"Conversão %":1.28},
   {"Score":"B","Leads":106,"Compradores":2,"Conversão %":1.89},
-  {"Score":"C","Leads":60,"Compradores":2,"Conversão %":3.33},
+  {"Score":"C","Leads":61,"Compradores":3,"Conversão %":4.92},
   {"Score":"D","Leads":2,"Compradores":0,"Conversão %":0.00},
   {"Score":"E","Leads":41,"Compradores":2,"Conversão %":4.88},
-  {"Score":"F","Leads":392,"Compradores":7,"Conversão %":1.79}
+  {"Score":"F","Leads":393,"Compradores":10,"Conversão %":2.54}
 ];
 
 // ================= HELPERS =================
@@ -887,7 +887,7 @@ CASOS.forEach(c => {
 });
 
 // ================ F BUYERS ================
-const F_BUYERS = [{"Nome": "Robson Gama pereira", "Ticket": "R$ 56.259", "TicketRaw": 56259, "Score_SDR": "F", "Score_Closer": "F", "Score_novo": "C", "Pontos_novo": 63, "Fechada_em": "11.06.2026 14:27", "Hospedou": "Não", "Intencao": "Talvez, se houver uma boa oportunidade", "Frequencia": "1 vez por ano", "Investimento": "Até R$ 5.000", "Origem": "Meta Ads"}, {"Nome": "Joelma Goncalves de Oliveira Matos", "Ticket": "R$ 44.713", "TicketRaw": 44713, "Score_SDR": "E", "Score_Closer": "F", "Score_novo": "D", "Pontos_novo": 52, "Fechada_em": "29.07.2026 20:35", "Hospedou": "Não", "Intencao": "—", "Frequencia": "Não viajo todos os anos", "Investimento": "Entre R$ 7.001 e R$ 10.000", "Origem": "Meta Ads"}, {"Nome": "Edinardo Matias", "Ticket": "R$ 39.999", "TicketRaw": 39999, "Score_SDR": "F", "Score_Closer": "F", "Score_novo": "B", "Pontos_novo": 78, "Fechada_em": "31.07.2026 09:08", "Hospedou": "Sim", "Intencao": "Quero continuar viajando para resorts all inclusive", "Frequencia": "1 vez por ano", "Investimento": "Até R$ 5.000", "Origem": "Meta Ads"}, {"Nome": "Andreia Espíndola", "Ticket": "R$ 33.457", "TicketRaw": 33457, "Score_SDR": "F", "Score_Closer": "F", "Score_novo": "A", "Pontos_novo": 85, "Fechada_em": "05.08.2026 15:25", "Hospedou": "Não", "Intencao": "Gostaria de ter minha primeira experiência em resort all inclusive", "Frequencia": "1 vez por ano", "Investimento": "Entre R$ 5.001 e R$ 7.000", "Origem": "Meta+Ads"}, {"Nome": "Vagner", "Ticket": "R$ 33.457", "TicketRaw": 33457, "Score_SDR": "F", "Score_Closer": "F", "Score_novo": "B", "Pontos_novo": 78, "Fechada_em": "25.07.2026 10:44", "Hospedou": "Não", "Intencao": "Gostaria de ter minha primeira experiência em resort all inclusive", "Frequencia": "1 vez por ano", "Investimento": "Até R$ 5.000", "Origem": "Meta Ads"}, {"Nome": "Urias Silva Vasconcelos", "Ticket": "R$ 32.787", "TicketRaw": 32787, "Score_SDR": "F", "Score_Closer": "F", "Score_novo": "A", "Pontos_novo": 85, "Fechada_em": "05.08.2026 12:51", "Hospedou": "Não", "Intencao": "Gostaria de ter minha primeira experiência em resort all inclusive", "Frequencia": "Mais de 1 vez por ano", "Investimento": "Entre R$ 5.001 e R$ 7.000", "Origem": "Meta+Ads"}, {"Nome": "Edson Pena Fayad", "Ticket": "R$ 24.997", "TicketRaw": 24997, "Score_SDR": "F", "Score_Closer": "F", "Score_novo": "C", "Pontos_novo": 60, "Fechada_em": "29.07.2026 20:47", "Hospedou": "Sim", "Intencao": "Quero continuar viajando para resorts all inclusive", "Frequencia": "Não viajo todos os anos", "Investimento": "Não invisto em férias", "Origem": "Meta Ads"}, {"Nome": "Gustavo Mendes", "Ticket": "R$ 24.997", "TicketRaw": 24997, "Score_SDR": "F", "Score_Closer": "F", "Score_novo": "C", "Pontos_novo": 65, "Fechada_em": "17.07.2026 08:59", "Hospedou": "Sim", "Intencao": "Quero continuar viajando para resorts all inclusive", "Frequencia": "—", "Investimento": "Entre R$ 5.001 e R$ 7.000", "Origem": "Meta Ads"}];
+const F_BUYERS = [{"Nome": "Robson Gama pereira", "Ticket": "R$ 56.259", "TicketRaw": 56259, "Score_SDR": "F", "Score_Closer": "F", "Score_novo": "C", "Pontos_novo": 63, "Fechada_em": "11.06.2026 14:27", "Hospedou": "Não", "Intencao": "Talvez, se houver uma boa oportunidade", "Frequencia": "1 vez por ano", "Investimento": "Até R$ 5.000", "Origem": "Meta Ads"}, {"Nome": "Joelma Goncalves de Oliveira Matos", "Ticket": "R$ 44.713", "TicketRaw": 44713, "Score_SDR": "E", "Score_Closer": "F", "Score_novo": "D", "Pontos_novo": 52, "Fechada_em": "29.07.2026 20:35", "Hospedou": "Não", "Intencao": "—", "Frequencia": "Não viajo todos os anos", "Investimento": "Entre R$ 7.001 e R$ 10.000", "Origem": "Meta Ads"}, {"Nome": "Edinardo Matias", "Ticket": "R$ 39.999", "TicketRaw": 39999, "Score_SDR": "F", "Score_Closer": "F", "Score_novo": "B", "Pontos_novo": 78, "Fechada_em": "31.07.2026 09:08", "Hospedou": "Sim", "Intencao": "Quero continuar viajando para resorts all inclusive", "Frequencia": "1 vez por ano", "Investimento": "Até R$ 5.000", "Origem": "Meta Ads"}, {"Nome": "Luis Carlos", "Ticket": "R$ 33.457", "TicketRaw": 33457, "Score_SDR": "—", "Score_Closer": "F", "Score_novo": "B", "Pontos_novo": 70, "Fechada_em": "19.08.2026 20:28", "Hospedou": "Não", "Intencao": "Talvez, se houver uma boa oportunidade", "Frequencia": "1 vez por ano", "Investimento": "Entre R$ 5.001 e R$ 7.000", "Origem": "Meta+Ads"}, {"Nome": "Andreia Espíndola", "Ticket": "R$ 33.457", "TicketRaw": 33457, "Score_SDR": "F", "Score_Closer": "F", "Score_novo": "A", "Pontos_novo": 85, "Fechada_em": "05.08.2026 15:25", "Hospedou": "Não", "Intencao": "Gostaria de ter minha primeira experiência em resort all inclusive", "Frequencia": "1 vez por ano", "Investimento": "Entre R$ 5.001 e R$ 7.000", "Origem": "Meta+Ads"}, {"Nome": "Vagner", "Ticket": "R$ 33.457", "TicketRaw": 33457, "Score_SDR": "F", "Score_Closer": "F", "Score_novo": "B", "Pontos_novo": 78, "Fechada_em": "25.07.2026 10:44", "Hospedou": "Não", "Intencao": "Gostaria de ter minha primeira experiência em resort all inclusive", "Frequencia": "1 vez por ano", "Investimento": "Até R$ 5.000", "Origem": "Meta Ads"}, {"Nome": "Urias Silva Vasconcelos", "Ticket": "R$ 32.787", "TicketRaw": 32787, "Score_SDR": "F", "Score_Closer": "F", "Score_novo": "A", "Pontos_novo": 85, "Fechada_em": "05.08.2026 12:51", "Hospedou": "Não", "Intencao": "Gostaria de ter minha primeira experiência em resort all inclusive", "Frequencia": "Mais de 1 vez por ano", "Investimento": "Entre R$ 5.001 e R$ 7.000", "Origem": "Meta+Ads"}, {"Nome": "Maykon Silva", "Ticket": "R$ 24.997", "TicketRaw": 24997, "Score_SDR": "F", "Score_Closer": "F", "Score_novo": "B", "Pontos_novo": 78, "Fechada_em": "18.08.2026 16:41", "Hospedou": "Sim", "Intencao": "Quero continuar viajando para resorts all inclusive", "Frequencia": "1 vez por ano", "Investimento": "Até R$ 5.000", "Origem": "Meta+Ads"}, {"Nome": "Edson Pena Fayad", "Ticket": "R$ 24.997", "TicketRaw": 24997, "Score_SDR": "F", "Score_Closer": "F", "Score_novo": "C", "Pontos_novo": 60, "Fechada_em": "29.07.2026 20:47", "Hospedou": "Sim", "Intencao": "Quero continuar viajando para resorts all inclusive", "Frequencia": "Não viajo todos os anos", "Investimento": "Não invisto em férias", "Origem": "Meta Ads"}, {"Nome": "Gustavo Mendes", "Ticket": "R$ 24.997", "TicketRaw": 24997, "Score_SDR": "F", "Score_Closer": "F", "Score_novo": "C", "Pontos_novo": 65, "Fechada_em": "17.07.2026 08:59", "Hospedou": "Sim", "Intencao": "Quero continuar viajando para resorts all inclusive", "Frequencia": "—", "Investimento": "Entre R$ 5.001 e R$ 7.000", "Origem": "Meta Ads"}];
 
 const fBody = document.getElementById('f-body');
 F_BUYERS.forEach(f => {
