@@ -211,8 +211,8 @@ td[data-tooltip]:hover::after{left:20%;transform:translateX(-20%)}
     <h1>Lead Score<span class="star">✦</span></h1>
     <div class="periodo" data-tooltip="Janela dos dados analisados: leads criados no funil SDR entre 22/12/2025 e 13/08/2026 (2.616 registros) e no funil Closer (1.312 registros). Vendas contadas = Venda ganha no funil Closer.">
       <span class="periodo-k">Período analisado</span>
-      <span class="periodo-v">22 dez, 2025 a 28 ago, 2026</span>
-      <span class="periodo-d">8 meses · 2.295 leads SDR · 1.119 leads Closer · 41 vendas Closer</span>
+      <span class="periodo-v">22 dez, 2025 a 07 out, 2026</span>
+      <span class="periodo-d">~10 meses · 4.531 leads SDR · 957 leads Closer · 64 vendas Closer</span>
     </div>
     <p class="sub">Coerência da régua atual, mudanças SDR × Closer, taxas de conversão reais e uma nova sugestão de pontuação, construída a partir das respostas dos compradores.</p>
 
@@ -332,7 +332,7 @@ td[data-tooltip]:hover::after{left:20%;transform:translateX(-20%)}
       </div>
     </div>
     <p class="muted" style="margin-bottom:24px;max-width:900px;font-size:15px">
-      Denominador = leads no funil (SDR ou Closer, respectivamente). Numerador = quantos desses leads viraram <b>Venda ganha no funil Closer</b> (etapa oficial de venda fechada). Total de vendas Closer no período: <b>36</b>.
+      Denominador = leads no funil (SDR ou Closer, respectivamente). Numerador = quantos desses leads viraram <b>Venda ganha no funil Closer</b> (etapa oficial de venda fechada). Total de vendas Closer no período: <b>64</b>.
     </p>
 
     <div class="compare">
@@ -353,14 +353,14 @@ td[data-tooltip]:hover::after{left:20%;transform:translateX(-20%)}
           <tbody id="conv-sdr-body"></tbody>
         </table>
         <div class="callout" style="margin-top:16px;padding:14px 16px">
-          <p style="font-size:13px;color:var(--fg-dim);line-height:1.5"><b style="color:var(--fg)">Insight:</b> Faixas com mais leads acabam gerando mais vendas em volume, mas em % E converte melhor (5,9%). A régua atual não distingue bem quem vira venda no Closer, o funil SDR é grande e a régua é fraca no topo.</p>
+          <p style="font-size:13px;color:var(--fg-dim);line-height:1.5"><b style="color:var(--fg)">Insight:</b> No SDR a régua converte pouco até no topo: A 2,98% e B 2,94%. F 0,93% e "Sem score" só 0,06% em 1.808 leads. Funil grande e régua que separa mal quem vira venda.</p>
         </div>
       </div>
 
       <!-- CLOSER -->
       <div class="card">
         <h3>Funil Closer</h3>
-        <div class="tiny" style="margin-bottom:14px">1.312 leads · 41 vendas (soma da coluna Vendas Closer = 41 ✓)</div>
+        <div class="tiny" style="margin-bottom:14px">957 leads · 64 vendas (soma da coluna Vendas Closer = 64 ✓)</div>
         <table>
           <thead>
             <tr>
@@ -374,7 +374,7 @@ td[data-tooltip]:hover::after{left:20%;transform:translateX(-20%)}
           <tbody id="conv-closer-body"></tbody>
         </table>
         <div class="callout" style="margin-top:16px;padding:14px 16px">
-          <p style="font-size:13px;color:var(--fg-dim);line-height:1.5"><b style="color:var(--fg)">Insight:</b> B é a faixa mais produtiva (8,05%), seguida de C (6,15%). F entrega 5,13% de conversão dentro do Closer, prova de que o corte financeiro descarta boas vendas.</p>
+          <p style="font-size:13px;color:var(--fg-dim);line-height:1.5"><b style="color:var(--fg)">Insight:</b> No Closer, B é a mais produtiva (9,43%) e A vem logo atrás (8,38%). O F ainda entrega 4,55% com 16 vendas, prova de que o corte financeiro em R$ 7.000 descarta bons compradores.</p>
         </div>
       </div>
     </div>
@@ -549,7 +549,7 @@ td[data-tooltip]:hover::after{left:20%;transform:translateX(-20%)}
 
 
   <div class="footer">
-    IMR · Ipioca Mar Resort · Análise interna Trilha Performance Digital · Período: 22 dez, 2025 a 28 ago, 2026 (8 meses) · Fonte: exports Kommo (SDR, Closer). Cruzamentos por telefone/email normalizado. Atualizado em 28/08/2026.
+    IMR · Ipioca Mar Resort · Análise interna Trilha Performance Digital · Período: 22 dez, 2025 a 07 out, 2026 · Fonte: Kommo ao vivo (Closer | IMR, SDR | IMR). Vendas = Venda ganha no Closer. Tabelas de conversão e cabeçalho atualizados em 08/10/2026; a seção da nova régua é do estudo original de 28/08/2026.
   </div>
 
 </main>
@@ -560,23 +560,22 @@ const MUD = /*json*/[{"Nome": "Mariane Nascimento", "Score_SDR": "F", "Score_Clo
 const MUD_EXTRA_HTML = `<tr><td colspan="6" style="text-align:center;color:var(--fg-dim);padding:16px;font-size:13px">+ 138 leads onde Closer apagou/preencheu score sem alterar a régua, planilha completa: <span style="color:var(--fg)">IMR, Leads que mudaram de Score.xlsx</span></td></tr>`;
 
 const CONV_SDR = [
-  {"Lead score":"A","Leads":193,"Compradores":1,"Conversão %":0.52},
-  {"Lead score":"B","Leads":331,"Compradores":6,"Conversão %":1.81},
-  {"Lead score":"C","Leads":148,"Compradores":3,"Conversão %":2.03},
-  {"Lead score":"D","Leads":13,"Compradores":0,"Conversão %":0.00},
-  {"Lead score":"E","Leads":35,"Compradores":2,"Conversão %":5.71},
-  {"Lead score":"F","Leads":697,"Compradores":13,"Conversão %":1.87},
-  {"Lead score":"Sem score","Leads":1199,"Compradores":1,"Conversão %":0.08}
+  {"Lead score":"A","Leads":302,"Compradores":9,"Conversão %":2.98},
+  {"Lead score":"B","Leads":442,"Compradores":13,"Conversão %":2.94},
+  {"Lead score":"C","Leads":250,"Compradores":3,"Conversão %":1.20},
+  {"Lead score":"D","Leads":31,"Compradores":0,"Conversão %":0.00},
+  {"Lead score":"E","Leads":86,"Compradores":1,"Conversão %":1.16},
+  {"Lead score":"F","Leads":1612,"Compradores":15,"Conversão %":0.93},
+  {"Lead score":"Sem score","Leads":1808,"Compradores":1,"Conversão %":0.06}
 ];
 const CONV_CLOSER = [
-  {"Lead score":"A","Leads":108,"Compradores":4,"Conversão %":3.70},
-  {"Lead score":"B","Leads":174,"Compradores":14,"Conversão %":8.05},
-  {"Lead score":"C","Leads":65,"Compradores":4,"Conversão %":6.15},
-  {"Lead score":"D","Leads":5,"Compradores":0,"Conversão %":0.00},
-  {"Lead score":"E","Leads":17,"Compradores":1,"Conversão %":5.88},
-  {"Lead score":"F","Leads":195,"Compradores":10,"Conversão %":5.13},
-  {"Lead score":"Sem score","Leads":745,"Compradores":8,"Conversão %":1.07},
-  {"Lead score":"Atualizar","Leads":3,"Compradores":0,"Conversão %":0.00}
+  {"Lead score":"A","Leads":167,"Compradores":14,"Conversão %":8.38},
+  {"Lead score":"B","Leads":212,"Compradores":20,"Conversão %":9.43},
+  {"Lead score":"C","Leads":103,"Compradores":5,"Conversão %":4.85},
+  {"Lead score":"D","Leads":9,"Compradores":0,"Conversão %":0.00},
+  {"Lead score":"E","Leads":27,"Compradores":2,"Conversão %":7.41},
+  {"Lead score":"F","Leads":352,"Compradores":16,"Conversão %":4.55},
+  {"Lead score":"Sem score","Leads":87,"Compradores":7,"Conversão %":8.05}
 ];
 const CONV_NEW = [
   {"Score":"A","Leads":427,"Compradores":9,"Conversão %":2.11},
